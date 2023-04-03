@@ -33,8 +33,22 @@ public class Main {
     }
 
     public static void task3() {
-        Set<String>unique = new HashSet<>(string);
+        Set<String> unique = new HashSet<>(string);
         System.out.println(unique.toString());
     }
+
+    public static void task4(List<String> word) {
+        Map<String, Integer> ww = new TreeMap<>();
+        for (String s : word) {
+            if (!ww.containsKey(s)) {
+                ww.put(s, 1);
+            } else {
+                ww.replace(s, ww.get(s) + 1);
+            }
+        }
+        System.out.println(ww);
+    }
+}
+
 
 
